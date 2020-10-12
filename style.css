@@ -2,8 +2,115 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
 h1 {
   color: blue;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 40px 0;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+h2#user-info::before {
+  content: '\f007';
+  color: grey;
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free";
+  padding-right: 10px;
+}
+
+h2[class="text-center-md"] {
+  padding-top: 30px;
+}
+
+h2[class="text-center-md"]::before {
+  content: '\f023';
+  color: grey;
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free";
+  padding-right: 10px;
+}
+
+h2#user-info:hover,
+h2[class="text-center-md"]:hover {
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+p {
+  font-size: 18px;
+  padding: 10px 0 10px 20px;
+}
+
+p.password {
+  padding-left: 0;
+}
+
+span {
+  font-weight: 700;
+}
+
+span#user-name,
+span#user-surname,
+span#user-fav-color {
+  color: #2654DE;
+}
+
+span#user-password {
+  color: red;
+}
+
+span#user-password::before {
+  content: '\f084';
+  color: grey;
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free";
+  padding: 0 10px;
+}
+
+span#user-password:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+span#user-password:hover::before {
+  text-decoration:none;
+  cursor: auto;
+}
+
+/******************* Media Query *******************/
+
+/* Responsive - Breakpoint 768px Medium md */
+@media screen and (min-width: 768px) {
+  .text-center-md {
+    text-align: center;
+  }
+}
+
+/* Responsive - Breakpoint 992px Large lg */
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 40px;
+    padding-bottom: 60px;
+  }
+
+  p {
+    font-size: 22px;
+    padding: 60px 0;
+  }
+
+  .text-center-lg {
+    text-align: center;
+  }
 }

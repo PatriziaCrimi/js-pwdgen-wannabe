@@ -18,10 +18,14 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
-  padding-bottom: 20px;
+  display: inline;
 }
 
-h2#user-info::before {
+#user-info {
+  margin-bottom: 30px;
+}
+
+#user-info > h2::before {
   content: '\f007';
   color: grey;
   font-weight: bold;
@@ -29,11 +33,12 @@ h2#user-info::before {
   padding-right: 10px;
 }
 
-h2[class="text-center-md"] {
-  padding-top: 30px;
+#password-section {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-h2[class="text-center-md"]::before {
+#password-section > h2::before {
   content: '\f023';
   color: grey;
   font-weight: bold;
@@ -41,8 +46,8 @@ h2[class="text-center-md"]::before {
   padding-right: 10px;
 }
 
-h2#user-info:hover,
-h2[class="text-center-md"]:hover {
+#user-info > h2:hover,
+#password-section > h2:hover {
   font-weight: 800;
   cursor: pointer;
   transition: all 0.25s;
@@ -85,7 +90,8 @@ span#user-password:hover {
 }
 
 span#user-password:hover::before {
-  text-decoration:none;
+  display: inline-block;
+  text-decoration: none;
   cursor: auto;
 }
 
@@ -102,12 +108,24 @@ span#user-password:hover::before {
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
+  }
+
+  #user-info {
+    margin-bottom: 20px;
+  }
+
+  #password-section {
+    margin-top: 60px;
   }
 
   p {
     font-size: 22px;
     padding: 60px 0;
+  }
+
+  p.password {
+    padding-top: 30px;
   }
 
   .text-center-lg {

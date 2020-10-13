@@ -21,6 +21,22 @@ h2 {
   display: inline;
 }
 
+h2:hover {
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+p {
+  font-size: 18px;
+  padding: 10px 0 10px 20px;
+}
+
+span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
 #page-wrapper {
   height: 100vh;
   width: 100vw;
@@ -53,24 +69,9 @@ h2 {
   padding-right: 10px;
 }
 
-#user-info > h2:hover,
-#password-section > h2:hover {
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-
-p {
-  font-size: 18px;
-  padding: 10px 0 10px 20px;
-}
-
 p.password {
   padding-left: 0;
-}
-
-span {
-  font-weight: 700;
+  padding-bottom: 20px;
 }
 
 span#user-name,
@@ -81,6 +82,7 @@ span#user-fav-color {
 
 span#user-password {
   color: red;
+  display: block;
 }
 
 span#user-password::before {
@@ -125,7 +127,19 @@ span#user-password:hover::before {
 
   h2 {
     font-size: 32px;
-    font-weight: 800;
+  }
+
+  h2:hover {
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 22px;
+    padding: 60px 0;
+  }
+
+  span {
+    font-size: 22px;
   }
 
   #user-info {
@@ -134,11 +148,6 @@ span#user-password:hover::before {
 
   #password-section {
     margin-top: 60px;
-  }
-
-  p {
-    font-size: 22px;
-    padding: 60px 0;
   }
 
   p.password {
